@@ -1,0 +1,407 @@
+/*** Agent Page Styles ***/
+.container-xxl {
+    min-height: 100vh;
+    padding-top: 0 !important;
+    margin-top: 75px;
+}
+
+/* Navbar Styles */
+.nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+}
+
+.nav-bar.sticky-top {
+    position: fixed;
+    padding: 0;
+    z-index: 9999;
+}
+
+/* Header Styles */
+.header {
+    padding: 3rem 0;
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('/img/carousel-1.jpg') center center;
+    background-size: cover;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    color: var(--dark);
+    margin-bottom: 1rem;
+}
+
+.header p {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Agent Card Styles */
+.agent-item {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .1);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.agent-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .2);
+}
+
+.agent-item .position-relative {
+    position: relative;
+}
+
+.agent-item img {
+    transition: .5s;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.agent-item:hover img {
+    transform: scale(1.1);
+}
+
+.agent-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: .5s;
+}
+
+.agent-item:hover .agent-overlay {
+    opacity: 1;
+}
+
+.agent-overlay .btn {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    margin: 0 5px;
+    transition: .3s;
+}
+
+.agent-overlay .btn:hover {
+    background: var(--primary);
+    color: #fff;
+}
+
+.agent-content {
+    padding: 25px;
+    background: #fff;
+}
+
+.agent-content h5 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--primary);
+}
+
+.agent-content p {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.agent-content .d-flex {
+    font-size: 0.85rem;
+}
+
+.agent-content i {
+    width: 20px;
+    text-align: center;
+}
+
+.agent-content .border-top {
+    margin-top: 20px;
+    border-color: #eee !important;
+}
+
+.agent-content a {
+    color: var(--dark);
+    text-decoration: none;
+    transition: .3s;
+    font-weight: 500;
+}
+
+.agent-content a:hover {
+    color: var(--primary);
+}
+
+/* Animation */
+.wow {
+    visibility: hidden;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 30px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.fadeInUp {
+    animation-name: fadeInUp;
+}
+
+/* Responsive */
+@media (max-width: 991.98px) {
+    .container-xxl {
+        padding-top: 60px !important;
+    }
+    
+    .header {
+        padding: 2rem 0;
+    }
+    
+    .agent-item img {
+        height: 350px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .container-xxl {
+        padding-top: 50px !important;
+    }
+    
+    .header {
+        padding: 1.5rem 0;
+    }
+    
+    .header h1 {
+        font-size: 2rem;
+    }
+    
+    .agent-item img {
+        height: 300px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .container-xxl {
+        padding-top: 40px !important;
+    }
+    
+    .header {
+        padding: 1rem 0;
+    }
+    
+    .header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .agent-item img {
+        height: 250px;
+    }
+    
+    .agent-content {
+        padding: 20px;
+    }
+    
+    .agent-content h5 {
+        font-size: 1.1rem;
+    }
+}
+
+/* Styles cho container chính */
+.container {
+    padding: 0 15px;
+}
+
+/* Styles cho tiêu đề */
+.text-center h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.text-center p {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Agent card styles */
+.property-item {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 45px rgba(0, 0, 0, .07);
+    transition: .5s;
+    margin-bottom: 30px;
+}
+
+.property-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 45px rgba(0, 0, 0, .09);
+}
+
+.property-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.property-item .text-center {
+    padding: 1.5rem;
+}
+
+.property-item h5 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.property-item small {
+    color: #666;
+}
+
+.property-item .d-flex {
+    background: #f8f9fa;
+}
+
+.property-item .d-flex small {
+    color: #666;
+    transition: .5s;
+}
+
+.property-item .d-flex small:hover {
+    color: var(--primary);
+    cursor: pointer;
+}
+
+.property-item .fa {
+    font-size: 1rem;
+}
+
+/* Animation */
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+}
+
+/* Media Queries cho responsive */
+@media (max-width: 1200px) {
+    .container-xxl {
+        padding-top: 70px;
+    }
+    
+    .text-center h1 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .container-xxl {
+        padding-top: 60px;
+    }
+    
+    .text-center h1 {
+        font-size: 2rem;
+    }
+    
+    .property-item img {
+        height: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container-xxl {
+        padding-top: 50px;
+    }
+    
+    .text-center h1 {
+        font-size: 1.8rem;
+    }
+    
+    .text-center p {
+        font-size: 1rem;
+    }
+    
+    .property-item img {
+        height: 200px;
+    }
+    
+    .property-item .text-center {
+        padding: 1rem;
+    }
+    
+    .property-item h5 {
+        font-size: 1.1rem;
+    }
+    
+    .property-item .d-flex small {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .container-xxl {
+        padding-top: 40px;
+    }
+    
+    .text-center h1 {
+        font-size: 1.5rem;
+    }
+    
+    .text-center p {
+        font-size: 0.9rem;
+    }
+    
+    .property-item img {
+        height: 180px;
+    }
+    
+    .property-item .text-center {
+        padding: 0.8rem;
+    }
+    
+    .property-item h5 {
+        font-size: 1rem;
+    }
+    
+    .property-item .d-flex small {
+        font-size: 0.75rem;
+    }
+    
+    .property-item .fa {
+        font-size: 0.9rem;
+    }
+} 

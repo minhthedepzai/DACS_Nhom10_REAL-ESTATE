@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <!-- Nền -->
+  <rect width="400" height="300" fill="#ffffff" rx="10" ry="10"/>
+  
+  <!-- Hình khối nhà -->
+  <g transform="translate(200, 150)">
+    <!-- Tòa nhà thông minh với hiệu ứng 3D -->
+    <rect x="-70" y="-100" width="140" height="140" fill="#2c3e50" rx="5" ry="5"/>
+    
+    <!-- Cửa sổ thông minh với hiệu ứng phát sáng -->
+    <rect x="-55" y="-85" width="20" height="20" fill="#3498db" opacity="0.9">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="3s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="-20" y="-85" width="20" height="20" fill="#2ecc71" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="2.5s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="15" y="-85" width="20" height="20" fill="#e74c3c" opacity="0.9">
+      <animate attributeName="opacity" values="0.9;1;0.9" dur="2s" repeatCount="indefinite"/>
+    </rect>
+    
+    <rect x="-55" y="-50" width="20" height="20" fill="#9b59b6" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="2.8s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="-20" y="-50" width="20" height="20" fill="#f1c40f" opacity="0.7">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="3.2s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="15" y="-50" width="20" height="20" fill="#1abc9c" opacity="0.9">
+      <animate attributeName="opacity" values="0.9;1;0.9" dur="3.5s" repeatCount="indefinite"/>
+    </rect>
+    
+    <!-- Cửa chính -->
+    <rect x="-20" y="0" width="40" height="40" fill="#34495e"/>
+    
+    <!-- Mái nhà hình lục giác -->
+    <polygon points="-90,-100 90,-100 70,-130 -70,-130" fill="#7f8c8d"/>
+    
+    <!-- Đường biểu đồ tăng trưởng -->
+    <polyline points="-60,20 -40,10 -20,15 0,5 20,0 40,10 60,0" 
+              stroke="#e74c3c" 
+              stroke-width="4" 
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round">
+      <animate attributeName="stroke-dasharray" from="0,300" to="300,0" dur="3s" repeatCount="1"/>
+    </polyline>
+    
+    <!-- Vòng tròn thời gian thực -->
+    <circle cx="0" cy="-30" r="15" fill="none" stroke="#3498db" stroke-width="3">
+      <animate attributeName="r" values="15;18;15" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Mũi tên chỉ hướng -->
+    <polygon points="0,-150 -10,-130 10,-130" fill="#e74c3c">
+      <animateTransform attributeName="transform" 
+                        type="rotate" 
+                        from="0 0 -140" 
+                        to="360 0 -140" 
+                        dur="10s" 
+                        repeatCount="indefinite"/>
+    </polygon>
+  </g>
+  
+  <!-- Văn bản -->
+  <text x="200" y="230" font-family="Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#2c3e50">REAL ESTATE MANAGER</text>
+  <text x="200" y="255" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#7f8c8d">QUẢN LÝ BẤT ĐỘNG SẢN</text>
+</svg>

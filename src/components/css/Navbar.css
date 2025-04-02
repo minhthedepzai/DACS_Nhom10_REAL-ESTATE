@@ -1,0 +1,109 @@
+/*** Navbar ***/
+.nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    transition: .5s;
+    z-index: 9999;
+    background-color: white;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.nav-bar.sticky-top {
+    position: fixed;
+    padding: 0;
+    z-index: 9999;
+}
+
+/* Chỉ để một giá trị padding-top cho body là đủ */
+body {
+    padding-top: 75px; /* Giảm xuống vừa đủ với chiều cao của navbar */
+}
+
+/* Xóa margin-top không cần thiết */
+.nav-bar + div,
+.nav-bar + section,
+.nav-bar + header {
+    margin-top: 0;
+}
+
+.navbar {
+    box-shadow: none;
+}
+
+.navbar .dropdown-toggle::after {
+    border: none;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    vertical-align: middle;
+    margin-left: 5px;
+    transition: .5s;
+}
+
+.navbar .dropdown-toggle[aria-expanded=true]::after {
+    transform: rotate(-180deg);
+}
+
+.navbar-light .navbar-nav .nav-link {
+    margin-right: 30px;
+    padding: 25px 0;
+    color: #FFFFFF;
+    font-size: 15px;
+    text-transform: uppercase;
+    outline: none;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
+    color: var(--primary);
+}
+
+@media (max-width: 991.98px) {
+    .nav-bar {
+        margin-top: 0; /* Xóa margin-top ở chế độ mobile */
+        position: fixed; /* Giữ nguyên position fixed */
+        top: 0;
+    }
+
+    .navbar-light .navbar-nav .nav-link  {
+        padding: 10px 0;
+        margin-left: 0;
+    }
+
+    .navbar-light .navbar-nav .nav-link::before {
+        display: none;
+    }
+}
+
+.navbar-light .navbar-brand {
+    height: 75px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: var(--dark);
+    font-weight: 500;
+}
+
+@media (min-width: 992px) {
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        top: 100%;
+        margin-top: 0;
+        transform: rotateX(-75deg);
+        transform-origin: 0% 0%;
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s;
+        
+    }
+
+    .navbar .nav-item:hover .dropdown-menu {
+        transform: rotateX(0deg);
+        visibility: visible;
+        transition: .5s;
+        opacity: 1;
+    }
+}

@@ -1,0 +1,151 @@
+/* Auth Form Styles */
+.auth-form-container {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.auth-form-container:hover {
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+}
+
+.auth-form-container h1 {
+  color: #0B2154;
+  font-weight: 700;
+}
+
+.auth-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  animation: fadeInLeft 1s ease-in-out;
+}
+
+.auth-image img {
+  max-width: 90%;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.form-control {
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  transition: all 0.3s;
+}
+
+.form-control:focus {
+  border-color: #066ac9;
+  box-shadow: 0 0 0 0.25rem rgba(6, 106, 201, 0.25);
+}
+
+.form-check-input:checked {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-primary {
+  background-color: #066ac9;
+  border-color: #066ac9;
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #054d90;
+  border-color: #054d90;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.success-icon {
+  animation: pulse 2s infinite;
+  color: #00b98e;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0.7;
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .auth-image {
+    display: none;
+  }
+}
+
+/* Custom error message */
+.form-error {
+  color: #dc3545;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* Form transition effects */
+.form-control {
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-control:focus {
+  border-color: #066ac9;
+  box-shadow: 0 0 0 0.2rem rgba(6, 106, 201, 0.25);
+  transform: translateY(-1px);
+}
+
+/* Ensure link animations */
+a {
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #054d90 !important;
+} 

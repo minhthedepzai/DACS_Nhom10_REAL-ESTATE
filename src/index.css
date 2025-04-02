@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  font-family: 'Heebo', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f8f9fa;
+  color: #666666;
+  line-height: 1.5;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  color: #0E2E50;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+:root {
+  --primary: #00B98E;
+  --secondary: #FF6922;
+  --light: #EFFDF5;
+  --dark: #0E2E50;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-primary:hover {
+  background-color: #00a77c;
+  border-color: #00a77c;
+}
+
+.text-primary {
+  color: var(--primary) !important;
+}
+
+.btn-social {
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
