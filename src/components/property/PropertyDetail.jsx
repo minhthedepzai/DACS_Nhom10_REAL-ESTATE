@@ -61,13 +61,13 @@ const PropertyDetail = () => {
             bedrooms: 3,
             bathrooms: 2,
             legalStatus: "Sổ hồng",
-            featuredImage: "https://via.placeholder.com/800x500",
+            featuredImage: "/img/Modern Apartment.jpg",
             images: [
-              "https://via.placeholder.com/800x500?text=Living+Room",
-              "https://via.placeholder.com/800x500?text=Bedroom",
-              "https://via.placeholder.com/800x500?text=Kitchen",
-              "https://via.placeholder.com/800x500?text=Bathroom",
-              "https://via.placeholder.com/800x500?text=Balcony"
+              "/img/VC1.jpg",
+              "/img/VC2.jpg",
+              "/img/VC3.jpg",
+              "/img/VC4.jpg",
+              
             ],
             coordinates: {
               latitude: 10.7956,

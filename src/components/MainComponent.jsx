@@ -3,6 +3,7 @@ import './css/style.css';
 import { Link } from 'react-router-dom';
 import HomeImages from './HomeImages';
 import Navbar from './Navbar';
+import Footer from './Footer';
 
 const MainComponent = () => {
   // States
@@ -327,72 +328,7 @@ const MainComponent = () => {
       </div>
 
       {/* Footer */}
-      <div className="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
-        <div className="container py-5">
-          <div className="row g-5">
-            <div className="col-lg-3 col-md-6">
-              <h5 className="text-white mb-4">Get In Touch</h5>
-              <p className="mb-2"><i className="bi bi-geo-alt text-primary me-3"></i>123 Street, New York, USA</p>
-              <p className="mb-2"><i className="bi bi-telephone text-primary me-3"></i>+012 345 67890</p>
-              <p className="mb-2"><i className="bi bi-envelope text-primary me-3"></i>info@example.com</p>
-              <div className="d-flex pt-2">
-                <button onClick={() => window.open('https://twitter.com')} className="btn btn-outline-light btn-social"><i className="bi bi-twitter"></i></button>
-                <button onClick={() => window.open('https://facebook.com')} className="btn btn-outline-light btn-social"><i className="bi bi-facebook"></i></button>
-                <button onClick={() => window.open('https://youtube.com')} className="btn btn-outline-light btn-social"><i className="bi bi-youtube"></i></button>
-                <button onClick={() => window.open('https://linkedin.com')} className="btn btn-outline-light btn-social"><i className="bi bi-linkedin"></i></button>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-6">
-              <h5 className="text-white mb-4">Quick Links</h5>
-              <Link className="btn btn-link text-white-50" to="/about">About Us</Link>
-              <Link className="btn btn-link text-white-50" to="/contact">Contact Us</Link>
-              <Link className="btn btn-link text-white-50" to="/services">Our Services</Link>
-              <Link className="btn btn-link text-white-50" to="/privacy-policy">Privacy Policy</Link>
-              <Link className="btn btn-link text-white-50" to="/terms">Terms & Condition</Link>
-            </div>
-            <div className="col-lg-3 col-md-6">
-              <h5 className="text-white mb-4">Photo Gallery</h5>
-              <div className="row g-2 pt-2">
-                {[1, 2, 3, 4, 5, 6].map((num) => (
-                  <div key={num} className="col-4">
-                    <div className="bg-light p-1 rounded text-center">
-                      <i className="bi bi-image text-primary" style={{ fontSize: '2rem' }}></i>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-6">
-              <h5 className="text-white mb-4">Newsletter</h5>
-              <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-              <div className="position-relative mx-auto" style={{ maxWidth: '400px' }}>
-                <input className="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email" />
-                <button type="button" className="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="container">
-          <div className="copyright">
-            <div className="row">
-              <div className="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                &copy; <Link to="/" className="border-bottom">Your Site Name</Link>, All Right Reserved.
-                <div className="mt-1">
-                  Designed By <a className="border-bottom" href="https://htmlcodex.com" target="_blank" rel="noopener noreferrer">HTML Codex</a>
-                </div>
-              </div>
-              <div className="col-md-6 text-center text-md-end">
-                <div className="footer-menu">
-                  <Link to="/">Home</Link>
-                  <Link to="/cookies">Cookies</Link>
-                  <Link to="/help">Help</Link>
-                  <Link to="/faq">FQAs</Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Footer />
 
       {/* Back to Top Button */}
       <button 

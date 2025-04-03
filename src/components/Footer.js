@@ -31,9 +31,16 @@ const Footer = () => {
           <div className="col-lg-3 col-md-6">
             <h5 className="text-white mb-4">Thư Viện Ảnh</h5>
             <div className="row g-2 pt-2">
-              {[1, 2, 3, 4, 5, 6].map((num) => (
-                <div key={num} className="col-4">
-                  <img className="img-fluid rounded bg-light p-1" src={`/img/property-${num}.jpg`} alt="" />
+              {[
+                '42_01.jpg',
+                'dreamhouse.jpg',
+                'hq720.jpg',
+                'Modern Apartment.jpg',
+                'Cozy Home.jpg',
+                'LXVilla.jpg'
+              ].map((img, index) => (
+                <div key={index} className="col-4">
+                  <img className="img-fluid rounded bg-light p-1" src={`/img/${img}`} alt={`Property ${index + 1}`} />
                 </div>
               ))}
             </div>
