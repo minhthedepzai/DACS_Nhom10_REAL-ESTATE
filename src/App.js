@@ -1,6 +1,7 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
+import ScrollToTop from './components/ScrollToTop';
 
 // Sử dụng React.lazy để tải các component theo nhu cầu
 const MainComponent = lazy(() => import('./components/MainComponent'));
@@ -25,6 +26,7 @@ const LoadingComponent = () => (
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="App">
         <Suspense fallback={<LoadingComponent />}>
           <Switch>

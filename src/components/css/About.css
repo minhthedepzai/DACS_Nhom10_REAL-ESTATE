@@ -15,3 +15,271 @@
     transform: skew(20deg);
     z-index: 1;
 }
+
+/* About Page Styles */
+.about-hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.about-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0, 185, 142, 0.1) 0%, rgba(0, 150, 115, 0.1) 100%);
+  z-index: 1;
+}
+
+.about-hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.about-hero h1 {
+  animation: slideInLeft 1s ease-out;
+}
+
+.about-hero p {
+  animation: slideInLeft 1s ease-out 0.3s backwards;
+}
+
+.about-hero img {
+  animation: zoomIn 1.5s ease-out;
+  transition: transform 0.5s ease;
+}
+
+.about-hero img:hover {
+  transform: scale(1.05);
+}
+
+/* Main Content Animations */
+.about-main-content {
+  position: relative;
+}
+
+.about-main-content h2 {
+  animation: fadeInUp 1s ease-out;
+}
+
+.about-main-content p {
+  animation: fadeInUp 1s ease-out 0.3s backwards;
+}
+
+.feature-item {
+  animation: fadeInUp 0.5s ease-out backwards;
+  transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+}
+
+.feature-item i {
+  transition: all 0.3s ease;
+}
+
+.feature-item:hover i {
+  transform: scale(1.2);
+  color: var(--primary);
+}
+
+/* Core Values Section */
+.core-values {
+  position: relative;
+  overflow: hidden;
+}
+
+.core-values::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0, 185, 142, 0.05) 0%, rgba(0, 150, 115, 0.05) 100%);
+  z-index: 1;
+}
+
+.core-values-content {
+  position: relative;
+  z-index: 2;
+}
+
+.core-values h2 {
+  animation: fadeInUp 1s ease-out;
+}
+
+.value-item {
+  animation: fadeInUp 0.5s ease-out backwards;
+  transition: all 0.3s ease;
+  padding: 2rem;
+  border-radius: 15px;
+  background: white;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.value-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.value-item i {
+  font-size: 3rem;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.value-item:hover i {
+  transform: scale(1.2) rotate(5deg);
+}
+
+.value-item h4 {
+  margin-bottom: 1rem;
+  color: #212529;
+  transition: all 0.3s ease;
+}
+
+.value-item:hover h4 {
+  color: var(--primary);
+}
+
+.value-item p {
+  color: #6c757d;
+  margin-bottom: 0;
+}
+
+/* Call to Action Section */
+.cta-section {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--primary) 0%, #009673 100%);
+  color: white;
+  padding: 5rem 0;
+}
+
+.cta-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('/img/pattern.png');
+  opacity: 0.1;
+  animation: slideInRight 20s linear infinite;
+}
+
+.cta-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.cta-content h2 {
+  animation: fadeInUp 1s ease-out;
+  margin-bottom: 1.5rem;
+}
+
+.cta-content p {
+  animation: fadeInUp 1s ease-out 0.3s backwards;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  animation: fadeInUp 1s ease-out 0.6s backwards;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Animation Keyframes */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 991.98px) {
+  .about-hero {
+    text-align: center;
+  }
+  
+  .about-hero h1,
+  .about-hero p {
+    animation: fadeInUp 1s ease-out;
+  }
+  
+  .value-item {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .about-hero img {
+    margin-top: 2rem;
+  }
+  
+  .cta-section {
+    padding: 3rem 0;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .about-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .value-item {
+    padding: 1.5rem;
+  }
+  
+  .value-item i {
+    font-size: 2.5rem;
+  }
+}
