@@ -1,3 +1,53 @@
+# React SB Admin
+
+Phiên bản React của template SB Admin từ StartBootstrap.
+
+## Cài đặt
+
+```bash
+npm install
+```
+
+## Chạy dự án
+
+```bash
+npm start
+```
+
+## Cấu trúc thư mục
+
+- `/src/components`: Chứa các component UI tái sử dụng (Navbar, Sidebar, Footer)
+- `/src/layouts`: Định nghĩa layout chung cho các trang (MainLayout, AuthLayout)
+- `/src/pages`: Chứa các trang chính của ứng dụng (Dashboard, Tables, Charts...)
+- `/src/assets`: Chứa hình ảnh, font chữ và tài nguyên tĩnh khác
+
+## Các tính năng
+
+- Giao diện đáp ứng đầy đủ (Responsive)
+- React Router cho điều hướng trang
+- Chart.js cho hiển thị biểu đồ
+- DataTables cho hiển thị và tìm kiếm dữ liệu bảng
+- Sử dụng Bootstrap 5 cho styling
+- FontAwesome cho biểu tượng (icons)
+
+## Các trang có sẵn
+
+- Dashboard
+- Tables
+- Charts
+- Layout Static
+- Layout Sidenav Light
+- Login
+- Register
+- Password Reset
+- 401 Error
+- 404 Error
+- 500 Error
+
+## Tùy chỉnh
+
+Bạn có thể dễ dàng tùy chỉnh giao diện và chức năng bằng cách chỉnh sửa các file trong thư mục components và pages.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

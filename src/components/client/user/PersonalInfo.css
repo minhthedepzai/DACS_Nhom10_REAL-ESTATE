@@ -1,0 +1,119 @@
+.info-group {
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.info-label {
+  display: block;
+  font-size: 0.875rem;
+  color: #6c757d;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.info-value {
+  display: block;
+  font-size: 1rem;
+  color: #212529;
+  text-align: left;
+}
+
+.user-profile-details {
+  padding: 1rem;
+}
+
+.user-profile-details .row {
+  margin: 0 -15px;
+}
+
+.user-profile-details .col-md-6 {
+  padding: 0 15px;
+}
+
+.info-value i {
+  margin-right: 0.5rem;
+  color: #0d6efd;
+}
+
+.info-value i.text-success {
+  color: #198754;
+}
+
+.info-value i.text-warning {
+  color: #ffc107;
+}
+
+/* Style cho form edit */
+.form-group {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.form-label {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-bottom: 0;
+  width: 100px;
+  text-align: left;
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+.form-control {
+  padding-left: 110px;
+  height: 45px;
+}
+
+/* Style cho radio group */
+.gender-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.gender-group .form-label {
+  position: static;
+  transform: none;
+  margin-right: 15px;
+  margin-bottom: 0;
+  min-width: 100px;
+}
+
+.gender-group .form-check-inline {
+  margin-right: 20px;
+  margin-bottom: 0;
+}
+
+.gender-group .form-check-label {
+  color: #495057;
+  font-size: 0.9rem;
+}
+
+.form-check-input:checked {
+  background-color: #00B98E;
+  border-color: #00B98E;
+}
+
+/* Style cho nút xóa tất cả */
+.delete-all-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #dee2e6;
+}
+
+.btn-delete-all {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.2s;
+}
+
+.btn-delete-all:hover {
+  background-color: #c82333;
+} 

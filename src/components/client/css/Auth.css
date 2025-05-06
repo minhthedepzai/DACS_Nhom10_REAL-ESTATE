@@ -1,0 +1,85 @@
+/* Tạo lại tệp Auth.css với hiệu ứng nâng cao và tối ưu cho mắt */
+
+.container-xxl {
+    min-height: 100vh;
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+/* CSS hiện tại */
+.auth-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #f8f9fa 0%, #edf2f7 100%);
+  color: #495057;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/* Loại bỏ padding-top body vì không còn navbar */
+body {
+  padding-top: 0 !important;
+}
+
+/* Khôi phục lại CSS cho thanh điều hướng */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 0.9rem;
+}
+
+.navbar a {
+  margin: 0 0.5rem;
+  font-size: 0.9rem;
+  color: #333;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: #007bff;
+}
+
+.navbar .nav-item {
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+
+.navbar .nav-item.dropdown {
+  position: relative;
+}
+
+.navbar .nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f8f9fa;
+} 

@@ -1,0 +1,30 @@
+/*** Team ***/
+.team-item {
+    box-shadow: 0 0 30px rgba(0, 0, 0, .08);
+    transition: .5s;
+}
+
+.team-item .btn {
+    position: absolute;
+    left: 0;
+    bottom: -40px;
+    right: 0;
+    height: 40px;
+}
+
+.team-item .btn:hover {
+    background: var(--primary);
+    color: #FFFFFF;
+}
+
+.team-item:hover {
+    box-shadow: none;
+}
+
+.team-item:hover .bg-primary {
+    background: var(--primary) !important;
+}
+
+.team-item:hover .bg-primary i {
+    color: var(--primary) !important;
+}

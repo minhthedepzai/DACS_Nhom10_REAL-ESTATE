@@ -1,0 +1,253 @@
+.toast-container {
+  position: fixed;
+  z-index: 9999;
+  padding: 16px;
+  width: 320px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.toast-container > * {
+  pointer-events: auto;
+}
+
+/* Vị trí container */
+.toast-top-right {
+  top: 16px;
+  right: 16px;
+}
+
+.toast-top-left {
+  top: 16px;
+  left: 16px;
+}
+
+.toast-bottom-right {
+  bottom: 16px;
+  right: 16px;
+}
+
+.toast-bottom-left {
+  bottom: 16px;
+  left: 16px;
+}
+
+.toast-top-center {
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.toast-bottom-center {
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Toast styles */
+.toast {
+  position: relative;
+  margin-bottom: 12px;
+  padding: 12px 16px;
+  width: 100%;
+  min-height: 50px;
+  border-radius: 6px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  background-color: #fff;
+  color: #444;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  animation: toast-in-right 0.3s ease-in-out;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.toast.exiting {
+  animation: toast-out-right 0.3s ease-in-out forwards;
+}
+
+/* Toast variants */
+.toast-success {
+  background-color: #edf7ed;
+  border-left: 4px solid #4caf50;
+}
+
+.toast-success .toast-icon {
+  color: #4caf50;
+}
+
+.toast-success .toast-progress {
+  background-color: #4caf50;
+}
+
+.toast-error {
+  background-color: #fdecea;
+  border-left: 4px solid #f44336;
+}
+
+.toast-error .toast-icon {
+  color: #f44336;
+}
+
+.toast-error .toast-progress {
+  background-color: #f44336;
+}
+
+.toast-warning {
+  background-color: #fff8e6;
+  border-left: 4px solid #ff9800;
+}
+
+.toast-warning .toast-icon {
+  color: #ff9800;
+}
+
+.toast-warning .toast-progress {
+  background-color: #ff9800;
+}
+
+.toast-info {
+  background-color: #e8f4fd;
+  border-left: 4px solid #2196f3;
+}
+
+.toast-info .toast-icon {
+  color: #2196f3;
+}
+
+.toast-info .toast-progress {
+  background-color: #2196f3;
+}
+
+/* Icon styles */
+.toast-icon {
+  flex-shrink: 0;
+  margin-right: 12px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Content styles */
+.toast-content {
+  flex: 1;
+  font-size: 14px;
+  padding-right: 8px;
+}
+
+/* Close button */
+.toast-close {
+  flex-shrink: 0;
+  font-size: 16px;
+  opacity: 0.6;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.toast-close:hover {
+  opacity: 1;
+}
+
+/* Animation styles */
+@keyframes toast-in-right {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes toast-out-right {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+/* Top positions animate from top */
+.toast-top-right .toast,
+.toast-top-left .toast,
+.toast-top-center .toast {
+  transform-origin: top center;
+}
+
+.toast-top-right .toast-hidden {
+  transform: translateY(-20px);
+}
+
+.toast-top-left .toast-hidden {
+  transform: translateY(-20px);
+}
+
+.toast-top-center .toast-hidden {
+  transform: translateY(-20px);
+}
+
+/* Bottom positions animate from bottom */
+.toast-bottom-right .toast,
+.toast-bottom-left .toast,
+.toast-bottom-center .toast {
+  transform-origin: bottom center;
+}
+
+.toast-bottom-right .toast-hidden {
+  transform: translateY(20px);
+}
+
+.toast-bottom-left .toast-hidden {
+  transform: translateY(20px);
+}
+
+.toast-bottom-center .toast-hidden {
+  transform: translateY(20px);
+}
+
+/* Add progress bar */
+.toast-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Media query for mobile */
+@media (max-width: 480px) {
+  .toast-container {
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .toast-top-right,
+  .toast-top-left,
+  .toast-top-center {
+    top: 0;
+    right: 0;
+    left: 0;
+    transform: none;
+  }
+  
+  .toast-bottom-right,
+  .toast-bottom-left,
+  .toast-bottom-center {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transform: none;
+  }
+  
+  .toast {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 0;
+  }
+} 

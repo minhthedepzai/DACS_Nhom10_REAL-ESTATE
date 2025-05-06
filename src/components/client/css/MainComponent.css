@@ -1,0 +1,17 @@
+/* MainComponent.css */
+.main-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+  padding: 20px 0;
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 10px 0;
+  }
+}

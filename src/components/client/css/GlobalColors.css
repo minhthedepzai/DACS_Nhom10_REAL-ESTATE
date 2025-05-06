@@ -1,0 +1,114 @@
+:root {
+  /* Màu chính */
+  --primary-color: #2563eb;
+  --primary-light: rgba(37, 99, 235, 0.1);
+  --primary-gradient: linear-gradient(135deg, #2563eb, #1d4ed8);
+  
+  /* Màu phụ */
+  --secondary-color: #1e293b;
+  --secondary-light: rgba(30, 41, 59, 0.1);
+  --secondary-gradient: linear-gradient(135deg, #1e293b, #0f172a);
+  
+  /* Màu nhấn */
+  --accent-color: #f59e0b;
+  --accent-light: rgba(245, 158, 11, 0.1);
+  --accent-gradient: linear-gradient(135deg, #f59e0b, #d97706);
+  
+  /* Màu nền */
+  --light-color: #f8fafc;
+  --light-gradient: linear-gradient(135deg, #f8fafc, #f1f5f9);
+  --body-bg: #f1f5f9;
+  --card-bg: #ffffff;
+  
+  /* Màu văn bản */
+  --text-color: #4b5563;
+  --dark-text-color: #1f2937;
+  --light-text-color: #9ca3af;
+  
+  /* Màu viền và bóng */
+  --border-color: #e2e8f0;
+  --shadow-color: rgba(0, 0, 0, 0.05);
+  
+  /* Màu trạng thái */
+  --success-color: #10b981;
+  --warning-color: #f59e0b;
+  --danger-color: #ef4444;
+  --info-color: #3b82f6;
+  
+  /* Hiệu ứng */
+  --transition-speed: 0.3s;
+  --border-radius: 8px;
+  --border-radius-lg: 12px;
+  --border-radius-xl: 16px;
+  --border-radius-full: 9999px;
+}
+
+/* Các class tiện ích */
+.text-primary { color: var(--primary-color); }
+.text-secondary { color: var(--secondary-color); }
+.text-accent { color: var(--accent-color); }
+.text-success { color: var(--success-color); }
+.text-warning { color: var(--warning-color); }
+.text-danger { color: var(--danger-color); }
+.text-info { color: var(--info-color); }
+
+.bg-primary { background-color: var(--primary-color); }
+.bg-secondary { background-color: var(--secondary-color); }
+.bg-accent { background-color: var(--accent-color); }
+.bg-light { background-color: var(--light-color); }
+.bg-success { background-color: var(--success-color); }
+.bg-warning { background-color: var(--warning-color); }
+.bg-danger { background-color: var(--danger-color); }
+.bg-info { background-color: var(--info-color); }
+
+.bg-primary-gradient { background-image: var(--primary-gradient); }
+.bg-secondary-gradient { background-image: var(--secondary-gradient); }
+.bg-accent-gradient { background-image: var(--accent-gradient); }
+.bg-light-gradient { background-image: var(--light-gradient); }
+
+.border-primary { border-color: var(--primary-color); }
+.border-secondary { border-color: var(--secondary-color); }
+.border-accent { border-color: var(--accent-color); }
+
+/* Các class cơ bản cho card, button, input */
+.card {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius-lg);
+  box-shadow: 0 4px 15px var(--shadow-color);
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  transition: all var(--transition-speed);
+}
+
+.btn-primary {
+  background-image: var(--primary-gradient);
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 4px 12px var(--primary-light);
+  transform: translateY(-3px);
+}
+
+.input {
+  padding: 12px 15px;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  transition: all var(--transition-speed);
+}
+
+.input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px var(--primary-light);
+} 

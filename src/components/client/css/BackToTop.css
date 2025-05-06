@@ -1,0 +1,40 @@
+.back-to-top-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 90px; /* Vị trí trên nút chat */
+  width: 40px;
+  height: 40px;
+  background-color: #00B98E;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 998;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.back-to-top-btn.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.back-to-top-btn:hover {
+  background-color: #009975;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(0, 185, 142, 0.4);
+}
+
+@media (max-width: 768px) {
+  .back-to-top-btn {
+    width: 35px;
+    height: 35px;
+    right: 15px;
+    bottom: 85px;
+  }
+} 

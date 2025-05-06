@@ -1,0 +1,1150 @@
+/* Tạo lại tệp Auth.css với hiệu ứng nâng cao và tối ưu cho mắt */
+
+/* Style cho navigation bar - đặt sát trên cùng */
+/* Loại bỏ các định nghĩa navbar xung đột */
+/* 
+.container-fluid.nav-bar {
+  padding: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  width: 100%;
+  margin-bottom: 0;
+  background-color: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+}
+
+.navbar {
+  padding: 0.6rem 2.5rem;
+  border-radius: 0;
+  background-color: transparent !important;
+  transition: all 0.3s ease;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand .icon {
+  background-color: rgba(0, 185, 142, 0.1);
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.7rem;
+  transition: all 0.3s ease;
+}
+
+.navbar-brand:hover .icon {
+  background-color: rgba(0, 185, 142, 0.2);
+  transform: rotate(10deg) scale(1.05);
+}
+
+.navbar-brand h1 {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #00B98E !important;
+  margin: 0;
+  letter-spacing: 0.3px;
+}
+
+.navbar-nav .nav-link {
+  color: #2c3e50;
+  font-weight: 600;
+  padding: 0.7rem 1.2rem;
+  transition: all 0.3s ease;
+  letter-spacing: 0.3px;
+  position: relative;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #00B98E;
+  transform: translateY(-2px);
+}
+
+.navbar-nav .nav-link:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: 0;
+  left: 50%;
+  background-color: #00B98E;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+  opacity: 0;
+}
+
+.navbar-nav .nav-link:hover:after,
+.navbar-nav .nav-link.active:after {
+  width: 40px;
+  opacity: 1;
+}
+
+.dropdown-toggle {
+  border-color: #e2e8f0;
+  color: #2c3e50;
+  font-size: 0.95rem;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+  border-radius: 20px;
+}
+
+.dropdown-toggle:hover {
+  background-color: rgba(0, 185, 142, 0.1);
+  border-color: #00B98E;
+  color: #00B98E;
+  transform: translateY(-2px);
+}
+
+.dropdown-menu {
+  min-width: 180px;
+  border: none;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 12px 0;
+  margin-top: 10px;
+  animation: fadeInDown 0.3s ease;
+}
+
+.dropdown-item {
+  font-size: 0.95rem;
+  padding: 0.7rem 1.3rem;
+  color: #2c3e50;
+  transition: all 0.3s ease;
+  border-left: 3px solid transparent;
+}
+
+.dropdown-item:hover {
+  background-color: rgba(0, 185, 142, 0.08);
+  color: #00B98E;
+  border-left: 3px solid #00B98E;
+  padding-left: 1.5rem;
+}
+*/
+
+/* CSS hiện tại */
+.auth-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #f8f9fa 0%, #edf2f7 100%);
+  color: #495057;
+  margin-top: 0;
+  padding-top: 80px; /* Để tránh bị che bởi navbar fixed */
+}
+
+/* Thêm lớp overlay với hiệu ứng mềm mại hơn */
+.auth-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-image: url('/img/dreamhouse.jpg'); */
+  background-image: url('../../../../public/img/dreamhouse.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.95) blur(3px);
+  opacity: 0.15; /* Tăng độ đậm của hình nền một chút */
+  z-index: -1;
+  animation: slowZoom 60s infinite alternate;
+}
+
+/* Thêm các hạt chuyển động */
+.auth-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><circle fill="%2300B98E" opacity="0.07" cx="20" cy="20" r="2"/><circle fill="%2300B98E" opacity="0.07" cx="60" cy="80" r="3"/><circle fill="%2300B98E" opacity="0.07" cx="120" cy="40" r="2"/><circle fill="%2300B98E" opacity="0.07" cx="160" cy="140" r="3"/><circle fill="%2300B98E" opacity="0.07" cx="30" cy="150" r="2"/></svg>');
+  z-index: -1;
+  opacity: 0.5;
+  animation: floatingParticles 60s linear infinite;
+}
+
+.auth-wrapper {
+  display: flex;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.97);
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08),
+              0 5px 15px rgba(0, 185, 142, 0.08);
+  overflow: hidden;
+  position: relative;
+  transition: all 0.5s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.auth-wrapper:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1),
+              0 10px 20px rgba(0, 185, 142, 0.1);
+  transform: translateY(-5px);
+}
+
+.auth-image-container {
+  flex: 1.2;
+  position: relative;
+  display: none;
+  overflow: hidden;
+  border-radius: 20px 0 0 20px;
+  box-shadow: inset 5px 0 30px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 768px) {
+  .auth-image-container {
+    display: block;
+  }
+}
+
+.auth-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: all 8s ease;
+  filter: brightness(0.9) contrast(1.1);
+  transform-origin: center;
+  animation: subtle-zoom 20s infinite alternate ease-in-out;
+}
+
+.auth-image-container:hover img {
+  transform: scale(1.1) rotate(1deg);
+}
+
+.auth-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0, 185, 142, 0.85) 0%, rgba(0, 150, 120, 0.95) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 3rem;
+  animation: pulseGradient 15s ease infinite alternate;
+  backdrop-filter: blur(2px);
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.2);
+}
+
+.auth-image-overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect fill="none" stroke="white" stroke-width="0.5" stroke-opacity="0.1" x="0" y="0" width="100" height="100" /></svg>');
+  background-size: 20px 20px;
+  opacity: 0.4;
+  z-index: 0;
+  animation: background-pan 120s linear infinite alternate;
+}
+
+.auth-image-overlay::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.3), transparent);
+  z-index: 0;
+}
+
+.auth-image-quote {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: center;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+  animation: floatText 8s ease-in-out infinite;
+  max-width: 90%;
+  letter-spacing: 0.5px;
+  line-height: 1.3;
+  position: relative;
+  z-index: 2;
+}
+
+.auth-image-quote::before {
+  content: '"';
+  position: absolute;
+  font-size: 5rem;
+  opacity: 0.2;
+  top: -3rem;
+  left: -1rem;
+  font-family: serif;
+  transform: rotate(180deg);
+}
+
+.auth-image-quote::after {
+  content: '"';
+  position: absolute;
+  font-size: 5rem;
+  opacity: 0.2;
+  bottom: -4rem;
+  right: -1rem;
+  font-family: serif;
+}
+
+.auth-image-text {
+  font-size: 1.25rem;
+  text-align: center;
+  max-width: 90%;
+  line-height: 1.7;
+  animation: fadeInSlideUp 1.5s ease-out;
+  letter-spacing: 0.3px;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 2;
+  margin-bottom: 2rem;
+}
+
+/* Nút khám phá trên hình ảnh */
+.auth-image-explore {
+  margin-top: 1.5rem;
+  padding: 0.9rem 2rem;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  color: white;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  z-index: 2;
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  animation: pulse 3s infinite;
+}
+
+.auth-image-explore:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.auth-image-explore::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: all 0.7s;
+}
+
+.auth-image-explore:hover::before {
+  left: 100%;
+}
+
+/* Thêm keyframes mới */
+@keyframes subtle-zoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes background-pan {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+.auth-form-container {
+  flex: 1;
+  width: 100%;
+  max-width: 100%;
+  background-color: transparent;
+  padding: 4rem 3rem;
+  transition: all 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+.auth-form-container:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.95), transparent);
+  z-index: -1;
+}
+
+.auth-form-container:hover {
+  transform: translateY(-3px);
+}
+
+.auth-form-container h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+  padding-bottom: 0.8rem;
+  background: linear-gradient(to right, #00B98E, #00d4a3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 0.5px;
+}
+
+.auth-form-container h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 100px;
+  height: 5px;
+  background: linear-gradient(to right, #00B98E, #00d4a3);
+  transform: translateX(-50%);
+  border-radius: 2px;
+  animation: expandWidth 2s ease;
+}
+
+/* Cải thiện cho các nút Login / Register */
+.auth-switch-btns {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.auth-switch-btn {
+  padding: 0.9rem 1.8rem;
+  border: 2px solid #00B98E;
+  background-color: transparent;
+  color: #00B98E;
+  font-weight: 700;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 140px;
+  text-align: center;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+
+.auth-switch-btn.active {
+  background-color: #00B98E;
+  color: white;
+  box-shadow: 0 8px 15px rgba(0, 185, 142, 0.25);
+}
+
+.auth-switch-btn:hover:not(.active) {
+  background-color: rgba(0, 185, 142, 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px rgba(0, 185, 142, 0.1);
+}
+
+/* Cải thiện các nút social login */
+.social-login {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.social-btn {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  color: #2c3e50;
+  border: 2px solid #e2e8f0;
+  transition: all 0.3s ease;
+  font-size: 1.4rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.social-btn:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.social-btn.facebook {
+  color: #1877f2;
+  border-color: rgba(24, 119, 242, 0.3);
+}
+
+.social-btn.facebook:hover {
+  background-color: rgba(24, 119, 242, 0.1);
+}
+
+.social-btn.google {
+  color: #ea4335;
+  border-color: rgba(234, 67, 53, 0.3);
+}
+
+.social-btn.google:hover {
+  background-color: rgba(234, 67, 53, 0.1);
+}
+
+.social-btn.twitter {
+  color: #1da1f2;
+  border-color: rgba(29, 161, 242, 0.3);
+}
+
+.social-btn.twitter:hover {
+  background-color: rgba(29, 161, 242, 0.1);
+}
+
+.input-container {
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+input {
+  width: 100%;
+  padding: 1.2rem 1.8rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+  color: #2c3e50;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+  outline: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+}
+
+input:focus {
+  border-color: #00B98E;
+  box-shadow: 0 0 0 5px rgba(0, 185, 142, 0.15);
+  background-color: white;
+  transform: translateY(-2px);
+}
+
+input::placeholder {
+  color: #94a3b8;
+  transition: all 0.3s ease;
+  opacity: 0.7;
+  font-size: 1rem;
+}
+
+input:focus::placeholder {
+  opacity: 0.5;
+  transform: translateX(5px);
+}
+
+.input-label {
+  position: absolute;
+  top: 0;
+  left: 1.5rem;
+  padding: 0 0.5rem;
+  font-size: 0.9rem;
+  color: #94a3b8;
+  background-color: white;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0;
+  font-weight: 600;
+}
+
+.input-group input:focus + .input-label,
+.input-group input:not(:placeholder-shown) + .input-label {
+  opacity: 1;
+  color: #00B98E;
+}
+
+.input-group input:focus::placeholder {
+  color: transparent;
+}
+
+.input-icon {
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+  transition: all 0.3s ease;
+  font-size: 1.3rem;
+}
+
+.input-group input:focus ~ .input-icon {
+  color: #00B98E;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.auth-button {
+  width: 100%;
+  padding: 1.2rem;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(to right, #00B98E, #00d4a3);
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  margin-top: 1.5rem;
+  box-shadow: 0 8px 20px rgba(0, 185, 142, 0.25);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.auth-button::before {
+  content: "";
+  position: absolute;
+  left: -100%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: all 0.5s ease;
+}
+
+.auth-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 185, 142, 0.3);
+  background: linear-gradient(to right, #00a67d, #00c49a);
+}
+
+.auth-button:hover::before {
+  left: 100%;
+}
+
+.auth-button:active {
+  transform: translateY(-2px);
+}
+
+.auth-button:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.auth-button:disabled::before {
+  display: none;
+}
+
+.auth-links {
+  margin-top: 2.5rem;
+  text-align: center;
+  position: relative;
+  padding-top: 2rem;
+}
+
+.auth-links::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #e2e8f0, transparent);
+}
+
+.auth-links a {
+  color: #00B98E;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.3s;
+  position: relative;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 20px;
+  letter-spacing: 0.3px;
+}
+
+.auth-links a::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: #00B98E;
+  transition: all 0.3s ease;
+  border-radius: 1px;
+}
+
+.auth-links a:hover::before {
+  width: 80%;
+}
+
+.auth-links a:hover {
+  color: #00a67d;
+  background-color: rgba(0, 185, 142, 0.05);
+}
+
+.error-message {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  border-left: 4px solid #ef4444;
+  animation: fadeIn 0.4s ease-in;
+  box-shadow: 0 5px 15px rgba(239, 68, 68, 0.1);
+  font-weight: 600;
+}
+
+.success-message {
+  background-color: rgba(0, 185, 142, 0.1);
+  color: #00B98E;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  border-left: 4px solid #00B98E;
+  animation: fadeIn 0.4s ease-in;
+  box-shadow: 0 5px 15px rgba(0, 185, 142, 0.1);
+  font-weight: 600;
+}
+
+/* Animation keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes expandWidth {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100px;
+  }
+}
+
+@keyframes slowZoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes floatingParticles {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 100%;
+  }
+}
+
+@keyframes pulseGradient {
+  0% {
+    background: linear-gradient(135deg, rgba(0, 185, 142, 0.8) 0%, rgba(0, 150, 120, 0.9) 100%);
+  }
+  50% {
+    background: linear-gradient(135deg, rgba(0, 150, 120, 0.85) 0%, rgba(0, 185, 142, 0.9) 100%);
+  }
+  100% {
+    background: linear-gradient(135deg, rgba(0, 185, 142, 0.8) 0%, rgba(0, 150, 120, 0.9) 100%);
+  }
+}
+
+@keyframes floatText {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .auth-wrapper {
+    flex-direction: column;
+    max-width: 550px;
+  }
+  
+  .auth-form-container {
+    padding: 3rem 2rem;
+  }
+  
+  .auth-form-container h2 {
+    font-size: 2rem;
+  }
+  
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+  
+  .navbar-brand h1 {
+    font-size: 1.4rem;
+  }
+  
+  .auth-button {
+    padding: 1rem;
+  }
+  
+  .input-container {
+    margin-bottom: 1.5rem;
+  }
+  
+  input {
+    padding: 1rem 1.5rem;
+  }
+  
+  .auth-container {
+    padding-top: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-form-container {
+    padding: 2.5rem 1.5rem;
+  }
+  
+  .auth-form-container h2 {
+    font-size: 1.8rem;
+  }
+  
+  .social-login {
+    gap: 1rem;
+  }
+  
+  .social-btn {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .auth-switch-btns {
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: center;
+  }
+  
+  .auth-switch-btn {
+    width: 100%;
+  }
+}
+
+/* Loại bỏ padding-top body vì đã có trong Navbar.css */
+body {
+  padding-top: 75px !important; /* !important để đảm bảo không bị ghi đè */
+}
+
+/* Thêm media query cho Galaxy Z Fold 5 và các thiết bị gập tương tự */
+@media (max-width: 380px) {
+  body {
+    padding-top: 65px !important;
+  }
+  
+  .auth-wrapper {
+    max-width: 100%;
+    margin: 0 10px;
+    border-radius: 15px;
+  }
+  
+  .auth-form-container {
+    padding: 2rem 1rem;
+  }
+  
+  .auth-form-container h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .auth-button {
+    padding: 0.9rem;
+    font-size: 1rem;
+  }
+  
+  .input-group {
+    margin-bottom: 1.2rem;
+  }
+  
+  input {
+    padding: 0.9rem 1.2rem;
+    font-size: 1rem;
+  }
+  
+  .navbar-brand h1 {
+    font-size: 1.2rem;
+  }
+  
+  .navbar-brand .icon {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .btn-outline-success {
+    padding: 0.5rem 1rem !important;
+    font-size: 0.9rem !important;
+  }
+} 
+
+/* Thêm nút mũi tên trở về trang chủ */
+.home-arrow {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  animation: bounceDown 2s infinite;
+}
+
+.home-arrow a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  background: linear-gradient(135deg, #00B98E, #00957a);
+  color: white;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 20px;
+  box-shadow: 0 5px 15px rgba(0, 185, 142, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.home-arrow a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #00d2a0, #00B98E);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.home-arrow a:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 185, 142, 0.4);
+}
+
+.home-arrow a:hover::before {
+  opacity: 1;
+}
+
+.home-arrow a::after {
+  content: 'Trang chủ';
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #00B98E;
+  font-size: 12px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  opacity: 0;
+  white-space: nowrap;
+}
+
+.home-arrow a:hover::after {
+  opacity: 1;
+  bottom: -30px;
+}
+
+@keyframes bounceDown {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-8px);
+  }
+  60% {
+    transform: translateY(-4px);
+  }
+}
+
+/* Nút trở về trang chủ */
+.home-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.home-button a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #00B98E, #00957a);
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: 0 5px 15px rgba(0, 185, 142, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 0.5px;
+}
+
+.home-button a i {
+  margin-right: 8px;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.home-button a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #00d2a0, #00B98E);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.home-button a:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 185, 142, 0.4);
+}
+
+.home-button a:hover i {
+  transform: translateX(-3px);
+}
+
+.home-button a:hover::before {
+  opacity: 1;
+}
+
+/* Thông báo lỗi email - định dạng đơn giản */
+.input-error-message {
+  position: absolute;
+  bottom: -20px;
+  left: 10px;
+  color: #ff4d4f;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* Thêm padding cho input-group để có chỗ hiển thị lỗi */
+.input-group, .form-group {
+  position: relative;
+  margin-bottom: 1.8rem;
+}
+
+/* Thiết lập đơn giản cho input có lỗi */
+.input-group.has-error input,
+.form-group.has-error input {
+  border: 1.5px solid #ff4d4f !important;
+  color: #333 !important;
+}
+
+/* Styling cho lỗi chung */
+.general-error {
+  color: #ff4d4f;
+  background-color: #fff1f0;
+  border: 1px solid #ffccc7;
+  border-radius: 4px;
+  padding: 10px 12px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.general-error:before {
+  content: "⚠️";
+  margin-right: 8px;
+  font-size: 16px;
+} 
